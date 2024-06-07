@@ -22,9 +22,13 @@ class DatabaseSeeder extends Seeder
     //         'email' => 'test@example.com',
     //     ]);
     // }
+    // public function run()
+    // {
+    //     $this->call([ProductsTableSeeder::class, OrdersTableSeeder::class]);
+    // }
     public function run(Faker $faker)
     {
-        for($i = 0; $i < 15; $i++) {
+        for ($i = 0; $i < 15; $i++) {
             $newUser = new User();
             $newUser->name = $faker->name();
             $newUser->email = $faker->email();

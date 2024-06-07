@@ -21,7 +21,7 @@ class ProductsTableSeeder extends Seeder
             $newProduct = new Product();
             $newProduct->name = $faker->word();
             $newProduct->description = $faker->paragraph();
-            $newProduct->price = $faker->randomFloat(2);
+            $newProduct->price = $faker->randomFloat(2, 10, 1000);
             $newProduct->image = 'https://picsum.photos/200/300';
             $newProduct->save();
         }

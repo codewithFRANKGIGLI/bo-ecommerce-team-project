@@ -15,4 +15,12 @@ class Product extends Model
         'price',
         'image',
     ];
+    // funzione per relazione con orders
+    public function orders() {
+        return $this->belongsToMany(Order::class);
+    }
+    // funzione per relazione con users
+    public function users() {
+        return $this->belongsToMany(User::class);
+    }
 }

@@ -25,6 +25,14 @@ class User extends Authenticatable
         'age',
         'password',
     ];
+    // relazione con products many to many
+    public function products() {
+        return $this->belongsTo(Product::class);
+    }
+    // relazione con orders one to many
+    public function orders() {
+        return $this->hasMany(Order::class);
+    }
 
     /**
      * The attributes that should be hidden for serialization.
